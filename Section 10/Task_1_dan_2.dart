@@ -11,6 +11,7 @@ class BangunRuang{
 
 class Kubus extends BangunRuang{
   int sisi = 0;
+  
   @override
   volume() {
     jumlah = sisi*sisi*sisi;
