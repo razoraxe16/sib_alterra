@@ -1,17 +1,16 @@
 class BangunRuang{
-  int? panjang;
-  int? lebar;
-  int? tinggi;
+  int panjang = 0;
+  int lebar = 0;
+  int tinggi = 0;
 
   int? jumlah;
   volume(){
-    jumlah = panjang!*lebar!*tinggi!;
+    jumlah = panjang*lebar*tinggi;
   }
 }
 
 class Kubus extends BangunRuang{
   int sisi = 0;
-  
   @override
   volume() {
     jumlah = sisi*sisi*sisi;
@@ -22,7 +21,7 @@ class Kubus extends BangunRuang{
 class Balok extends BangunRuang{
   @override
   volume() {
-    jumlah = panjang!*lebar!*tinggi!;
+    jumlah = panjang*lebar*tinggi;
     print(jumlah);
   }
 }
