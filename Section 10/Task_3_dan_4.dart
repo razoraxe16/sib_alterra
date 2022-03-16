@@ -9,7 +9,7 @@ class Matematika{
   }
 }
 
-class KelipatanPersekutuanTerkecil extends Matematika{
+class KelipatanPersekutuanTerkecil implements Matematika{
   @override
   hasil(int x, int y) {
     int i;
@@ -24,7 +24,7 @@ class KelipatanPersekutuanTerkecil extends Matematika{
   }
 }
 
-class KelipatanPersekutuanTerbesar extends Matematika{
+class FaktorPersekutuanTerbesar implements Matematika{
   @override
   hasil(int x, int y) {
       int i;
@@ -42,9 +42,9 @@ class KelipatanPersekutuanTerbesar extends Matematika{
   }
 }
 void main(){
-  var kpk1 = KelipatanPersekutuanTerkecil();
-  var fpb1 = KelipatanPersekutuanTerbesar();
+  var kpk = KelipatanPersekutuanTerkecil();
+  var fpb = FaktorPersekutuanTerbesar();
 
-  print('Kelipatan Persekutuan Terkecil dari 16 dan 40 = '+kpk1.hasil(16, 40).toString());
-  print('Kelipatan Persekutuan Terbesar dari 16 dan 40 = '+fpb1.hasil(16, 40).toString());
+  print("Kelipatan Persekutuan Terkecil dari 16 dan 40 = "+kpk.hasil(16, 40).toString());
+  print("Faktor Persekutuan Terbesar dari 16 dan 40 = "+fpb.hasil(16, 40).toString());
 }
